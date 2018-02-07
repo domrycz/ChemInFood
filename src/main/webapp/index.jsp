@@ -22,7 +22,7 @@
         <h3>For now, you can check if every ingredient of product you are buying is good for you.</h3><br>
         <h4>Let's see what can we do to avoid buying food with unhealthy additives: <br><br>
             <a href="ShowAll"><button type="button" class="btn-success btn-lg">List of all chemical additives</button></a><br><br>
-            <a href="#"><button type="button" class="btn-success btn-lg">Search by E-XXX</button></a><br><br>
+            <a href="findByE.jsp"><button type="button" class="btn-success btn-lg">Search by E-XXX</button></a><br><br>
             <a href="#"><button type="button" class="btn-success btn-lg">Search by name</button></a>
         </h4>
     </div>

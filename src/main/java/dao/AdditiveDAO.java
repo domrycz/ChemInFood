@@ -2,26 +2,22 @@ package dao;
 
 import domain.Additive;
 
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.persistence.*;
+import javax.transaction.Transactional;
 import java.util.List;
 
+@RequestScoped
 public class AdditiveDAO implements DAOInterface {
 
     @Inject
     private EntityManager em;
 
     @Override
+    @Transactional
     public void create(Additive additive) {
-        EntityTransaction trans = em.getTransaction();
-        try {
-            trans.begin();
-            em.persist(additive);
-            trans.commit();
-        } catch (Exception e) {
-            if(trans != null) {trans.rollback();}
-            e.printStackTrace();
-        }
+        em.persist(additive);
     }
 
     @Override
@@ -32,7 +28,6 @@ public class AdditiveDAO implements DAOInterface {
     public List<Additive> showAll() {
         List<Additive> additives;
         TypedQuery<Additive> query = em.createNamedQuery("Additive.findAll", Additive.class);
-
         additives = query.getResultList();
 
         return additives;
