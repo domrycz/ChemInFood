@@ -11,7 +11,7 @@ import javax.enterprise.inject.Produces;
 public class EntityManagerHelper {
 
     @PersistenceContext
-    EntityManager em;
+    private EntityManager em;
 
     @Produces
     @RequestScoped

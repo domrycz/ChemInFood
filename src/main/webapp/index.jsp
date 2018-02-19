@@ -23,7 +23,7 @@
         <h4>Let's see what can we do to avoid buying food with unhealthy additives: <br><br>
             <a href="ShowAll"><button type="button" class="btn-success btn-lg">List of all chemical additives</button></a><br><br>
             <a href="findByE.jsp"><button type="button" class="btn-success btn-lg">Search by E-XXX</button></a><br><br>
-            <a href="#"><button type="button" class="btn-success btn-lg">Search by name</button></a>
+            <a href="findByName.jsp"><button type="button" class="btn-success btn-lg">Search by name</button></a>
         </h4>
     </div>
 </main>

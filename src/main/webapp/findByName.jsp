@@ -16,6 +16,7 @@
         }
         .input-group {
             margin: 0 auto;
+            font-size: 0.9em;
         }
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -28,14 +29,18 @@
         <div class="jumbotron text-center">
             <h2>List of chemical food additives</h2>
             <h3>According to Bill Statham's <p style="font-style: italic">What's really in your basket</p></h3><br>
-            <h4>Type the number E-XXX</h4>
+            <h4>Type the name of the additive</h4>
             <form method="post" action="ShowOne">
                 <div class="form-group row">
-                    <div class="input-group col-xs-3">
-                        <span class="input-group-addon">E-</span>
-                        <input type="text" class="form-control" name="number" placeholder="100" pattern="\d{3}" required><br>
+                    <div class="radio input-group col-xs-3">
+                        <label class="radio-inline"><input type="radio" name="language" value="eng" checked>English</label>
+                        <label class="radio-inline"><input type="radio" name="language" value="pol">Polski</label>
                     </div><br>
-                    <button type="submit" class="btn-info btn-lg">Search</button>
+                    <div class="input-group col-xs-3">
+                        <span class="input-group-addon">Name</span>
+                        <input type="text" class="form-control" name="name" placeholder="name / nazwa"><br>
+                    </div><br>
+                    <button type="submit" class="btn-info btn-lg">Search</button><br><br>
                 </div>
             </form>
             <br>
@@ -45,3 +50,4 @@
 </main>
 </body>
 </html>
+

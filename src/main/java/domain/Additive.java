@@ -5,7 +5,11 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "additives")
-@NamedQuery(name = "Additive.findAll", query = "SELECT a FROM Additive a")
+@NamedQueries({
+        @NamedQuery(name = "Additive.findAll", query = "SELECT a FROM Additive a"),
+        @NamedQuery(name = "Additive.findByEngName", query = "SELECT a FROM Additive a WHERE a.nameEng = :name"),
+        @NamedQuery(name = "Additive.findByPolName", query = "SELECT a FROM Additive a WHERE a.namePol = :name")
+        })
 public class Additive implements Serializable {
 
     @Id
